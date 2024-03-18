@@ -1,0 +1,30 @@
+#server:
+#    servlet:
+#        context-path: /api
+
+spring:
+    application:
+        name: springsecurity
+    datasource:
+        url: jdbc:postgresql://localhost:5432/spring_security
+        username: postgres
+        password: "0034"
+        driver-class-name: org.postgresql.Driver
+    jpa:
+        hibernate:
+            ddl-auto: create-drop
+        show-sql: true
+        properties:
+            hibernate:
+                format_sql: true
+        database: postgresql
+        database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+# logging:
+#    level:
+#        org:
+#            springframework:
+#                security: TRACE
+
+jwt:
+    secret-key: b03fae950491c0189889a436377fac2d95c6160c21b6f30b45e277a746630370
